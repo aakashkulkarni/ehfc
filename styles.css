@@ -50,11 +50,20 @@ header {
     text-align: center;
 }
 
+.title-wrapper img {
+    height: 50px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .page-title {
     font-family: 'Monoton', cursive;
     font-size: 2em;
     letter-spacing: 0.4em;
     color: #fff;
+    margin-top: -10px;
 }
 
 .page-subtitle {
@@ -72,17 +81,182 @@ header {
     /* repeat minmax(1fr auto) */
 }
 
-.cards-wrapper > .card{
+/* CARD ONE START */
+
+.cards-wrapper > .card-one {
     background-color: rgba(248, 244, 244, 0.952);
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    box-shadow: 0px 19px 38px rgba(0,0,0,0.40), 0 15px 12px rgba(0,0,0,0.22);
     height: 300px;
+    max-width: 450px;
+    margin: auto;
     margin: 10px;
+    border-radius: 10px;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .card-one:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: rgb(223, 59, 59);
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transition: -webkit-transform 0.25s ease-out;
+    transition: -webkit-transform 0.25s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  }
+  .card-one:hover:before {
+    -webkit-transform: scale(35);
+            transform: scale(35);
+  }
+
+  .card-title:hover a {
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    color: rgba(248, 244, 244, 0.952);
+  }
+
+/* CARD ONE END */
+
+/* CARD TWO START */ 
+
+.cards-wrapper > .card-two {
+    background-color: rgba(248, 244, 244, 0.952);
+    box-shadow: 0px 19px 38px rgba(0,0,0,0.40), 0 15px 12px rgba(0,0,0,0.22);
+    height: 300px;
+    max-width: 450px;
+    margin: auto;
+    margin: 10px;
+    border-radius: 10px;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .card-two:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: rgb(223, 59, 59);
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transition: -webkit-transform 0.25s ease-out;
+    transition: -webkit-transform 0.25s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  }
+  .card-two:hover:before {
+    -webkit-transform: scale(35);
+            transform: scale(35);
+  }
+
+  .card-title:hover a {
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    color: rgba(248, 244, 244, 0.952);
+  }
+
+  /* CARD TWO END */
+
+  /* CARD THREE START */
+
+  .cards-wrapper > .card-three {
+    background-color: rgba(248, 244, 244, 0.952);
+    box-shadow: 0px 19px 38px rgba(0,0,0,0.40), 0 15px 12px rgba(0,0,0,0.22);
+    height: 300px;
+    max-width: 450px;
+    margin: auto;
+    margin: 10px;
+    border-radius: 10px;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .card-three:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: rgb(223, 59, 59);
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transition: -webkit-transform 0.25s ease-out;
+    transition: -webkit-transform 0.25s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  }
+  .card-three:hover:before {
+    -webkit-transform: scale(35);
+            transform: scale(35);
+  }
+
+  .card-title:hover a {
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    color: rgba(248, 244, 244, 0.952);
+  }
+
+/* CARD THREE END */
+
+.go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background-color: rgb(223, 59, 59);
+    border-radius: 0 4px 0 45px;
+    float: right;
+}
+  
+.go-arrow {
+    margin-top: -10px;
+    margin-right: -10px;
+    color: rgba(248, 244, 244, 0.952);
+    font-family: courier, sans;
 }
 
 .card-title {
-    color: rgb(223, 59, 59);
+    height: 170px;
     text-align: center;
-    padding-top: 10px;
+    align-items: center;
+    padding-top: 130px;
+}
+
+.card-title a {
+    text-decoration: none;
+    color: rgb(223, 59, 59);
     font-family: 'Open Sans', serif;
     font-size: 1.2em;
 }
