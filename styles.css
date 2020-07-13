@@ -3,46 +3,42 @@ body {
     margin:0px;
 }
 
-header {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgb(223, 82, 82)), to(rgb(223, 59, 59)));
-    background-image: linear-gradient(0deg, rgb(223, 82, 82) 0%, rgb(223, 59, 59) 100%);
-    padding: 25px 0 164px 0;
+section {
     position: relative;
-  }
-  header.wave-bottom:after, header.wave-top:after {
-    content: "";
-    display: block;
-    margin: 0;
-    padding: 0;
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-size: 100% 64px;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(0deg, rgb(223, 82, 82) 0%, rgb(223, 59, 59) 100%);
+    overflow: hidden;
+}
+
+.wave {
     position: absolute;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 64px;
-  }
-  @media (max-width: 768px) {
-    header.wave-bottom:after, header.wave-top:after {
-      height: 32px;
-      background-size: 100% 32px;
-    }
-  }
-  @media (max-width: 349px) {
-    header.wave-bottom:after, header.wave-top:after {
-      height: 16px;
-      background-size: 100% 16px;
-    }
-  }
-  header.wave-bottom:after {
+    height: 100px;
+    background: url("https://triss.dev/examples/wave.php?color=white&orientation=0deg");
+    background-size: 1000px 100px;
+    animation: animate 20s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
     bottom: 0;
-    background-image: url("https://triss.dev/examples/wave.php?color=white&orientation=0deg"); 
-  }
-  header.wave-top:after {
-    top: 0;
-    background-image: url("https://triss.dev/examples/wave.php?color=white&orientation=180deg");
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-  }
+}
+
+@keyframes animate
+{
+    0%
+    {
+        background-position-x: 0;
+
+    }
+    100%
+    {
+        background-position-x: 1000px;
+        
+    }
+}
 
 .title-wrapper {
     display: grid;
@@ -53,6 +49,7 @@ header {
 .title-wrapper img {
     height: 50px;
     text-align: center;
+    padding-top: 20px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -122,6 +119,18 @@ header {
   }
 
   .card-title:hover a {
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    color: rgba(248, 244, 244, 0.952);
+  }
+
+  .go-corner:hover {
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    color: rgba(248, 244, 244, 0.952);
+  }
+
+  .go-arrow:hover {
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     color: rgba(248, 244, 244, 0.952);
